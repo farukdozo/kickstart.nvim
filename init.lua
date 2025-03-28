@@ -1038,3 +1038,8 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.o.expandtab = true -- Use spaces instead of tabs
+vim.o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
+vim.o.tabstop = 2 -- Number of spaces a <Tab> counts for
+vim.o.softtabstop = 2 -- Number of spaces inserted when pressing <Tab>
