@@ -1059,3 +1059,5 @@ vim.o.tabstop = 2 -- Number of spaces a <Tab> counts for
 vim.o.softtabstop = 2 -- Number of spaces inserted when pressing <Tab>
 
 vim.opt.termguicolors = true -- Neovim to use true colors
+
+vim.keymap.set('n', '<leader>o', '<cmd>:Oil<CR>', { desc = '[O]il' })
