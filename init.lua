@@ -254,6 +254,12 @@ require('lazy').setup({
     lazy = false,
   },
 
+  {
+    'nvim-pack/nvim-spectre',
+  },
+  {
+    'nvim-lua/plenary.nvim',
+  },
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
   --    {
