@@ -1072,3 +1072,4 @@ vim.o.softtabstop = 2 -- Number of spaces inserted when pressing <Tab>
 vim.opt.termguicolors = true -- Neovim to use true colors
 
 vim.keymap.set('n', '<leader>o', '<cmd>:Oil<CR>', { desc = '[O]il' })
+vim.keymap.set('n', '<leader>rg', '<cmd>:Spectre<CR>', { desc = 'Search & [R]eplace [G]lobal (Spectre)' })
