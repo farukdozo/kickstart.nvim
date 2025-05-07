@@ -260,6 +260,25 @@ require('lazy').setup({
   {
     'nvim-lua/plenary.nvim',
   },
+  {
+    'kdheepak/lazygit.nvim',
+    lazy = false,
+    cmd = {
+      'LazyGit',
+      'LazyGitConfig',
+      'LazyGitCurrentFile',
+      'LazyGitFilter',
+      'LazyGitFilterCurrentFile',
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+      'nvim-lua/plenary.nvim',
+    },
+    config = function()
+      require('telescope').load_extension 'lazygit'
+    end,
+  },
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
   --    {
