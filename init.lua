@@ -1092,3 +1092,4 @@ vim.opt.termguicolors = true -- Neovim to use true colors
 
 vim.keymap.set('n', '<leader>o', '<cmd>:Oil<CR>', { desc = '[O]il' })
 vim.keymap.set('n', '<leader>rg', '<cmd>:Spectre<CR>', { desc = 'Search & [R]eplace [G]lobal (Spectre)' })
+vim.keymap.set('n', '<leader>lg', '<cmd>:LazyGit<CR>', { desc = '[L]azy[G]it' })
