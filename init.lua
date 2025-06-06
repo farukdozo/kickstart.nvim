@@ -279,6 +279,18 @@ require('lazy').setup({
       require('telescope').load_extension 'lazygit'
     end,
   },
+  {
+    'supermaven-inc/supermaven-nvim',
+    config = function()
+      require('supermaven-nvim').setup {
+        keymaps = {
+          accept_suggestion = '<C-a>',
+          clear_suggestion = '<C-s>',
+          accept_word = '<C-j>',
+        },
+      }
+    end,
+  },
 
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
@@ -1095,3 +1107,4 @@ vim.opt.termguicolors = true -- Neovim to use true colors
 vim.keymap.set('n', '<leader>o', '<cmd>:Oil<CR>', { desc = '[O]il' })
 vim.keymap.set('n', '<leader>rg', '<cmd>:Spectre<CR>', { desc = 'Search & [R]eplace [G]lobal (Spectre)' })
 vim.keymap.set('n', '<leader>lg', '<cmd>:LazyGit<CR>', { desc = '[L]azy[G]it' })
+vim.keymap.set('n', '<leader>at', '<cmd>:SupermavenToggle<CR>', { desc = '[A]I Autocomplete [T]oggle' })
