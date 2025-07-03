@@ -291,6 +291,41 @@ require('lazy').setup({
       }
     end,
   },
+  -- {
+  --   'SmiteshP/nvim-navic',
+  --   dependencies = { 'neovim/nvim-lspconfig' },
+  --   config = function()
+  --     local navic = require 'nvim-navic'
+  --
+  --     local on_attach = function(client, bufnr)
+  --       if client.server_capabilities.documentSymbolProvider then
+  --         navic.attach(client, bufnr)
+  --       end
+  --     end
+  --
+  --     require('lspconfig').ts_ls.setup {
+  --       on_attach = on_attach,
+  --     }
+  --
+  --     require('lspconfig').lua_ls.setup {
+  --       on_attach = on_attach,
+  --     }
+  --
+  --     navic.setup {
+  --       auto_attach = true,
+  --     }
+  --
+  --     vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+  --   end,
+  -- },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl', -- required for the new v3 API
+    opts = {
+      scope = { enabled = true },
+      indent = { char = '▏' },
+    }, -- default options; customize if needed
+  },
 
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
