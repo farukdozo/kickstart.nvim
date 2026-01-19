@@ -774,8 +774,15 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-        cssls = {},
-        css_variables = {},
+        cssls = {
+          settings = {
+            css = {
+              validate = true,
+              lint = { unknownAtRules = 'ignore' },
+              remoteStyleSheets = false, -- prevent fetching Google Fonts etc.
+            },
+          },
+        },
         dockerls = {},
         html = {},
         jsonls = {},
@@ -869,6 +876,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        php = { 'phpcbf' },
+        html = { 'prettier' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -1148,3 +1157,9 @@ vim.keymap.set('n', '<leader>o', '<cmd>:Oil<CR>', { desc = '[O]il' })
 vim.keymap.set('n', '<leader>rg', '<cmd>:Spectre<CR>', { desc = 'Search & [R]eplace [G]lobal (Spectre)' })
 vim.keymap.set('n', '<leader>lg', '<cmd>:LazyGit<CR>', { desc = '[L]azy[G]it' })
 vim.keymap.set('n', '<leader>at', '<cmd>:SupermavenToggle<CR>', { desc = '[A]I Autocomplete [T]oggle' })
+
+-- Global indentation defaults
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
