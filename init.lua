@@ -918,7 +918,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'ash'
     end,
   },
 
@@ -1051,7 +1051,8 @@ vim.opt.termguicolors = true -- Neovim to use true colors
 vim.keymap.set('n', '<leader>o', '<cmd>:Oil<CR>', { desc = '[O]il' })
 vim.keymap.set('n', '<leader>rg', '<cmd>:Spectre<CR>', { desc = 'Search & [R]eplace [G]lobal (Spectre)' })
 vim.keymap.set('n', '<leader>lg', '<cmd>:LazyGit<CR>', { desc = '[L]azy[G]it' })
-vim.keymap.set('n', '<leader>at', '<cmd>:SupermavenToggle<CR>', { desc = '[A]I Autocomplete [T]oggle' })
+vim.keymap.set('n', '<leader>ta', '<cmd>:SupermavenToggle<CR>', { desc = '[A]I Autocomplete [T]oggle' })
+vim.keymap.set('n', '<leader>e', '<cmd>:Neotree<CR>', { desc = '[E]xplore Neovim Tree' })
 
 -- Global indentation defaults
 vim.opt.expandtab = true
