@@ -6,7 +6,7 @@ return {
     config = function()
       vim.cmd.colorscheme("ash")
 
-      -- Tokyo Night Storm inspired colorscheme
+      -- Tokyo Night Storm colorscheme
       local c = {
         bg = "#24283b",
         bg_dark = "#1f2335",
