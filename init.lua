@@ -571,9 +571,6 @@ require('lazy').setup({
           --
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
           local client = vim.lsp.get_client_by_id(event.data.client_id)
-          if client and client.name == 'tailwindcss' then
-            vim.lsp.document_color.enable(false, { client_id = client.id })
-          end
 
           if client and client:supports_method('textDocument/documentHighlight', event.buf) then
             local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
@@ -623,6 +620,8 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
+        -- Note: Custom LSP servers are now in lua/custom/plugins/lspconfig.lua
+        --  This prevents them from being overwritten on upstream merges
 
         stylua = {}, -- Used to format Lua code
 
