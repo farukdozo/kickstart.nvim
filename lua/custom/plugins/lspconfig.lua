@@ -9,10 +9,7 @@ return {
     vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if client and client.name == 'tailwindcss' then
-          client.server_capabilities.colorProvider = false
-          vim.lsp.document_color.enable(false, { client_id = client.id })
-        end
+        if client and (client.name == 'tailwindcss' or client.name == 'cssls') then vim.lsp.document_color.enable(false, { client_id = client.id }) end
       end,
     })
 
